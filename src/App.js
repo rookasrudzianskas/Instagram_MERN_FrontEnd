@@ -181,14 +181,14 @@ function App() {
       <div className="app__posts">
         <div className="app__postsLeft">
           <FlipMove>
-            {posts.map(({ id, post }) => (
+            {posts.map((post) => (
               <Post
                 user={user}
-                key={id}
-                postId={id}
+                key={post._id}
+                postId={post._id}
                 username={post.username}
                 caption={post.caption}
-                imageUrl={post.imageUrl}
+                imageUrl={post.image}
               />
             ))}
           </FlipMove>
