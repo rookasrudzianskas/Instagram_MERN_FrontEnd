@@ -3,6 +3,11 @@ import "./Post.css";
 import Avatar from "@material-ui/core/Avatar";
 import { db } from "./firebase";
 import firebase from "firebase";
+import Pusher from "pusher-js";
+
+const pusher = new Pusher('27efe7b0f6a1ca09f7dd', {
+    cluster: 'eu'
+});
 
 const Post = forwardRef(
   ({ user, username, postId, imageUrl, caption }, ref) => {
