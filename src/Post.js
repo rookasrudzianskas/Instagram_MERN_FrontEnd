@@ -9,6 +9,8 @@ const Post = forwardRef(
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState("");
 
+      // console.log(user?.displayName)
+
     useEffect(() => {
       let unsubscribe;
       if (postId) {
@@ -44,7 +46,7 @@ const Post = forwardRef(
             alt={username}
             src="/static/images/avatar/1.jpg"
           />
-          <h3>{username}</h3>
+          <h3>{user?.displayName}</h3>
         </div>
 
         <img className="post__image" src={imageUrl} alt="post" />
