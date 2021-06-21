@@ -79,9 +79,10 @@ function App() {
     });
 
     const channel = pusher.subscribe('posts');
-    channel.bind('inserted', function(data) {
-     fetchPosts();
-    });
+    channel.bind('inserted', (data) => {
+      console.log(data);
+      fetchPosts();
+    } )
   }, []);
 
 
